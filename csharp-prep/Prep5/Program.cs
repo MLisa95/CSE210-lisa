@@ -6,16 +6,16 @@ class Program
     {
         DisplayMessage();
 
-        string userName = PromptUserName();;
-        int userNum = PromptUserNumber();
+        string userName = PromptUserName();
+        int userNum = PromptUserNumber(5);
 
-        int square = SquareNumber();
-        DisplayResult();
+        int square = SquareNumber(userNum);
+        DisplayResult(userName, square);
         
     }
-    static void DisplayMessage(string message)
+    static void DisplayMessage()
     {
-        Console.Write("Welcome to the program!");
+        Console.WriteLine("Welcome to the program!");
     }
         
     static string PromptUserName ()

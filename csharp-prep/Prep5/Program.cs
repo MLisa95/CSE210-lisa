@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 class Program
 {
@@ -7,9 +8,11 @@ class Program
         DisplayMessage();
 
         string userName = PromptUserName();
+        
         int userNum = PromptUserNumber(5);
 
         int square = SquareNumber(userNum);
+        
         DisplayResult(userName, square);
         
     }
@@ -22,7 +25,7 @@ class Program
     {
         Console.Write("Please enter your username: ");
         string userName = Console.ReadLine();
-        return userName;
+        return userName; //usually use return when there is an input from user
     }
 
     static int PromptUserNumber(int userNum)
